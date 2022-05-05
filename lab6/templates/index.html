@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table border="2px" width="100%">
+        <tr>
+            <th>id</th>
+            <th>n</th>
+            <th>name</th>
+            <th>email</th>
+            <th>group</th>
+        </tr>
+    {% for student in students%}
+        <tr>
+            <th>{{student.id}}</th>
+            <th>{{student.n}}</th>
+            <th>{{student.name}}</th>
+            <th>{{student.email}}</th>
+            <th>{{student.group}}</th>
+        </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>
