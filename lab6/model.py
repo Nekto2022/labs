@@ -2,11 +2,13 @@ from peewee import *
 
 db = SqliteDatabase('student.db')
 
+
 class Good(Model):
     good = BooleanField()
 
     class Meta:
         database = db
+
 
 class Student(Model):
     n = IntegerField()
@@ -17,6 +19,7 @@ class Student(Model):
 
     class Meta:
         database = db
+
 
 def init_db():
     with db:
