@@ -4,6 +4,7 @@ from model import db, Student, init_db
 
 env = Environment(loader=FileSystemLoader("templates"))
 
+
 class Root(object):
     @cherrypy.expose
     def index(self):
@@ -39,6 +40,7 @@ class Root(object):
         Student.delete_by_id(Student.select().where(Student.id == id))
         db.close()
         return "success"
+
 
 if __name__ == '__main__':
     cherrypy.quickstart(Root(), "/")
