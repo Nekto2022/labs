@@ -3,7 +3,7 @@ from peewee import *
 db = SqliteDatabase('student.db')
 
 
-class Good(Model):
+class Characteristic(Model):
     good = BooleanField()
 
     class Meta:
@@ -15,7 +15,7 @@ class Student(Model):
     name = CharField()
     email = CharField()
     group = CharField()
-    good_id = ForeignKeyField(Good)
+    good_id = ForeignKeyField(Characteristic)
 
     class Meta:
         database = db
@@ -23,4 +23,4 @@ class Student(Model):
 
 def init_db():
     with db:
-        db.create_tables([Student, Good])
+        db.create_tables([Student, Characteristic])
