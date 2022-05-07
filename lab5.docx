@@ -1,0 +1,57 @@
+﻿1
+git init
+
+2
+git status
+git add lab1.py lab2.py
+
+3
+echo “.idea/” > .gitignore
+git status
+
+
+4 
+git add lab3.py lab4.py  lab6/ test_data/
+git status
+git commit -m "initial commit"
+
+5
+git add lab6/model.py 
+git commit -m “model fix”
+
+
+6
+git branch dev
+git checkout dev
+git status
+git add lab6/
+git commit -m “model name update”
+git checkout master
+git merge dev
+
+7
+git remote add origin https://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@github.com/Nekto2022/labs.git
+git remote -v
+git push origin master
+
+
+8
+git clone https://github.com/Nekto2022/labs.git
+
+9
+
+
+
+s
+
+s
+
+
+
+
+
+1
+
+a
+
+
