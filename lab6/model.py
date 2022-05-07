@@ -4,7 +4,7 @@ db = SqliteDatabase('student.db')
 
 
 class Characteristic(Model):
-    good = BooleanField()
+    goods = CharField()
 
     class Meta:
         database = db
@@ -15,7 +15,7 @@ class Student(Model):
     name = CharField()
     email = CharField()
     group = CharField()
-    good_id = ForeignKeyField(Characteristic)
+    characteristic_id = ForeignKeyField(Characteristic)
 
     class Meta:
         database = db

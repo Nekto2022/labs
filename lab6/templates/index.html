@@ -12,6 +12,7 @@
             <th>name</th>
             <th>email</th>
             <th>group</th>
+            <th>characteristic</th>
         </tr>
     {% for student in students%}
         <tr>
@@ -20,9 +21,19 @@
             <th>{{student.name}}</th>
             <th>{{student.email}}</th>
             <th>{{student.group}}</th>
-            <th>{{student.good}}</th>
+            <th>{{student.characteristic}}</th>
+            <th><a href="/delete?id={{student.id}}">Удалить</a></th>
         </tr>
     {% endfor %}
     </table>
+    <form method="get" action="/create">
+        <input type="text" name="n">
+        <input type="text" name="name">
+        <input type="text" name="email">
+        <input type="text" name="group">
+        <input type="text" name="good">
+        <button type="submit">Создать</button>
+    </form>
 </body>
 </html>
+
